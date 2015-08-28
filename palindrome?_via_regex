@@ -1,0 +1,13 @@
+function palindrome(str) {
+  var str1 = str.replace(/\W/g, '');
+    console.log("str1 = " + str1);
+  var str2 = str.replace(/\W/g, '');
+    console.log("str2 = " + str2);
+  str2 = str2.split("").reverse().join("");
+  console.log(str2);
+  if (str1.toLowerCase() == str2.toLowerCase()) {
+    return true;
+  } else {
+    return false;
+  }
+}
