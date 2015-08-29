@@ -1,0 +1,9 @@
+function end(str, target) {
+  sub = str.substring( (str.length - target.length), str.length);
+  console.log("sub is " + sub + "\nstr is " + str);
+  if (sub === target) {
+    console.log("TRUE! " + str + " ends with " + sub + ".");
+  } else {
+    console.log("FALSE! " + str + " does not end with " + target + ".");
+  }
+}
