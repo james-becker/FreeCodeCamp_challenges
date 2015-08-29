@@ -1,6 +1,9 @@
+//There are a variety of ways to accomplish the task of capitalizing
+//the first character in every word in a string. From my research,
+//the following is the most efficient and simplest.
+
 function titleCase(str) {
-  str = str.toLowerCase();
-  arr = str.split(" ");
+  arr = str.toLowerCase()split(" ");
   for ( i = 0; i < arr.length; i ++ ) {
     arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1);
     }
