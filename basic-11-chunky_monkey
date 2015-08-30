@@ -1,0 +1,13 @@
+// Spent an hour debugging this because I had a semicolon between the for loop and the braces. It still passed in JSBin!
+//return a multidimensional array containing arrays of size "size" which contain the elements in arr, consecutively.
+
+function chunk(arr, size) {
+  multiArr = [];
+  for ( i = 0; i < arr.length; i += size ) {
+    multiArr.push(arr.slice(i, (size + i)));
+  }
+  return multiArr;
+}
+
+chunk(['a', 'b', 'c', 'd', '2', '5'], 4);
+//should return [['a','b'],['c','d']]
