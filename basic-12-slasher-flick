@@ -1,4 +1,4 @@
-//This one seemed too easy!
+//This one seemed too easy
 
 function slasher(arr, howMany) {
   temp = arr.slice((howMany), arr.length);
