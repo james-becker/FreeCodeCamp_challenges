@@ -1,5 +1,4 @@
 function bouncer(arr) {
-  // Don't show a false ID to this bouncer.
   arrFilter = arr.filter(function(item) {
     return Boolean(item);
   });
