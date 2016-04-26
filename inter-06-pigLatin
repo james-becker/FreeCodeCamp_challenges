@@ -1,0 +1,19 @@
+function translatePigLatin(str) {
+  if ( /[aeiou]/.test(str.charAt(0)) === true ) {
+    str = str + "way";
+    return str;
+  } else {
+    var consonantCount = 0;
+    for (i = 0; i < str.length; i++) {
+      
+      if ( /[aeiou]/.test(str.charAt(i)) === false ) {
+        consonantCount ++ ;
+      } else {
+        str = str.substr(consonantCount, str.length - consonantCount) + str.substr(0, consonantCount) + "ay";
+        return str;
+      }
+    }
+  }
+}
+
+console.log(translatePigLatin("California"));
