@@ -1,0 +1,14 @@
+function whereAreYou(collection, source) {
+  var arr = [];
+  var sourceKeys = Object.keys(source);
+
+  return collection.filter(function(ob) {
+    for ( i = 0; i < sourceKeys.length; i ++ )
+      if (ob.hasOwnProperty(sourceKeys[i]) !== true || ob[sourceKeys[i]] !== source[sourceKeys[i]]) {
+        return false;
+      }
+    return true;
+  });
+}
+
+console.log(whereAreYou([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }], { "a": 1 }));
