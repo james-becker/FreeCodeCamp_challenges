@@ -1,0 +1,15 @@
+function uniteUnique() {
+  var arr = [];
+  var args = Array.prototype.slice.call(arguments);
+
+  args.forEach(function(arg) {
+    arr = arr.concat(arg);
+  });
+  
+  arr2 = arr.filter(function(item, index) {
+    return arr.indexOf(item) == index;
+  }); 
+  return arr2;
+}
+
+console.log(uniteUnique([1, 2, 3], [5, 2, 1]));
