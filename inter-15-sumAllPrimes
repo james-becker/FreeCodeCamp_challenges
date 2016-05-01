@@ -1,0 +1,27 @@
+var sumPrimes = function(num) {
+  var arr = [];
+  var max = Math.sqrt(num);
+  var sum = 0;
+
+  for (var i = 0; i <= num; i++) {
+    arr.push(true);
+  }
+
+  for (var i = 2; i <= num; i++) {
+    if (arr[i]) {
+      for (var j = Math.pow(i, 2); j <= num; j += i) {
+        arr[j] = false;
+      }
+    }
+  }
+
+  for (i = 2; i <= num ; i++) {
+    if (arr[i] === true) {
+      sum += i;
+    }
+  }
+
+  return sum;
+};
+
+console.log(sumPrimes(977));
