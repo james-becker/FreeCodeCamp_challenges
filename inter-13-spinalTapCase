@@ -1,11 +1,5 @@
 function spinalCase(str) {
-  str = str.charAt(0).toUpperCase() + str.slice(1);
-  str = str.replace(/\s+/," ");
-  str = str.replace(/([A-Z])+/g, ' $1');
-  str = str.replace(/[_&'-]+/g, ' ');
-  str = str.replace(/\s+/g, '-');
-  str = str.replace(/-/,"");
-  str = str.toLowerCase();
-  console.log(str);
+  str = str.replace(/([a-z])([A-Z])/g,"$1-$2");
+  str = str.replace(/\s+|_+/g,"-").toLowerCase();
   return str;
 }
