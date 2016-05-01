@@ -1,0 +1,20 @@
+function isOdd(n) {
+  return (n % 2);
+}
+
+function sumFibs(num) {
+  var current = 1;
+  var previous = 0;
+  var sum = 0;
+  
+  while (current <= num) {
+    if (isOdd(current)) {
+      sum += current;
+    }
+    current += previous;
+    previous = current - previous;
+  }
+  return sum;
+}
+
+sumFibs(1000);
